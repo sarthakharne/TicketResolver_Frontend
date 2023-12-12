@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysql-spe-service:
+  mysql-spe-services:
     image: mysql
     container_name: mysql-spe-services
     restart: always
@@ -28,7 +28,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - mysql-spe-service
+      - mysql-spe-services
 
   ticketresolver_frontend_Container:
     image: "sarthakharne2262/ticketresolver_frontend:latest"
