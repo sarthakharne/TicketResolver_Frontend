@@ -16,8 +16,8 @@ services:
       - "~/spe-dp:/var/lib/mysql"
 
   spe-backend-container:
-    image: "sarthakharne2262/TicketResolver_Backend"
-    container_name: TicketResolver_Backend_Container
+    image: "sarthakharne2262/ticketresolver_backend"
+    container_name: ticketresolver_backend_Container
     restart: always
     networks:
       - spe-network
@@ -31,15 +31,15 @@ services:
       - mysql-spe-service
 
   spe-frontend-container:
-    image: "sarthakharne2262/TicketResolver_Frontend"
-    container_name: TicketResolver_Frontend_Container
+    image: "sarthakharne2262/ticketresolver_frontend"
+    container_name: ticketresolver_frontend_Container
     restart: always
     networks:
       - spe-network
     ports:
       - "3000:3000"
     depends_on:
-      - TicketResolver_Backend_Container
+      - ticketresolver_backend_Container
     
 networks:
   spe-network:

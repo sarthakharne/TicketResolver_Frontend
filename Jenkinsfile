@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Git clone') {
             steps {
-            git branch: 'main',url: 'https://github.com/sarthakharne/TicketResolver_Frontend.git'
+            git branch: 'main',url: 'https://github.com/sarthakharne/ticketresolver_frontend.git'
             }
         }
         stage('Docker Build Image') {
             steps {
                 script{
-                    dockerimage=docker.build "sarthakharne2262/TicketResolver_Frontend"   
+                    dockerimage=docker.build "sarthakharne2262/ticketresolver_frontend"   
                 }
             }
         }
