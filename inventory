@@ -1,2 +1,2 @@
 [targets]
-172.17.0.1 ansible_user=all
+localhost ansible_connection = jenkins
