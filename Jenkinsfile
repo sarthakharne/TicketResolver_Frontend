@@ -12,7 +12,7 @@ pipeline {
         stage('Docker Build Image') {
             steps {
                 script{
-                    dockerimage=docker.build "sarthakharne/TicketResolver_Frontend"   
+                    dockerimage=docker.build "sarthakharne2262/TicketResolver_Frontend"   
                 }
             }
         }
@@ -27,14 +27,14 @@ pipeline {
         }
           stage("Removing Image from local"){
             steps{
-                sh "docker rmi sarthakharne/TicketResolver_Frontend"
+                sh "docker rmi sarthakharne2262/TicketResolver_Frontend"
             }
         }
 
         stage('Ansible pull docker image') {
             steps {
                 ansiblePlaybook colorized: true,
-                credentialsId: 'nirajlocal',
+                credentialsId: 'DockerHubCred',
                 disableHostKeyChecking: true,
                 inventory: 'inventory',
                 playbook: 'ansible-playbook.yml',
