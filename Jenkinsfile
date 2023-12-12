@@ -19,7 +19,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script{
-                    docker.withRegistry('','dockerhub'){
+                    docker.withRegistry('','DockerHubCred'){
                     dockerimage.push()
                     }
                 }
@@ -27,10 +27,13 @@ pipeline {
         }
           stage("Removing Image from local"){
             steps{
-                sh "docker rmi sarthakharne2262/TicketResolver_Frontend"
+                script{
+                    sh 'docker container prune -f'
+                    sh 'docker image prune -f'
+                }
             }
         }
-
+        
         stage('Ansible pull docker image') {
             steps {
                 ansiblePlaybook colorized: true,
