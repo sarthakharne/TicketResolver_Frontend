@@ -37,11 +37,11 @@ pipeline {
         stage('Ansible pull docker image') {
             steps {
                 ansiblePlaybook colorized: true,
-                credentialsId: 'DockerHubCred',
+                credentialsId: 'localhost',
                 disableHostKeyChecking: true,
                 inventory: 'inventory',
                 playbook: 'ansible-playbook.yml',
-                vaultCredentialsId: 'vault-pass'
+                // vaultCredentialsId: 'vault-pass'
             }
         }
       
