@@ -11,7 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: "Abcd@1234"
       MYSQL_ROOT_HOST: "spe-project"
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - "~/spe-dp:/var/lib/mysql"
 
