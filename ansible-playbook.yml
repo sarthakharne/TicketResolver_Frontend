@@ -14,8 +14,13 @@
         src: ./docker-compose.yml
         dest: ./
 
+    - name: Pull the Docker images specifed in docker-compose
+      shell: 
+        cmd: docker compose pull
+        chdir: ./
+
     - name: run docker-compose file
-      command: docker compose up -d
+      command: docker compose up -d --build
 
     # - name: Prune the dangling Docker images
     #   command: docker image prune --force
