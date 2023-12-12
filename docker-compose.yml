@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql-spe-service:
     image: mysql
-    container_name: mysql-spe-sevices
+    container_name: mysql-spe-services
     restart: always
     networks:
       - spe-network

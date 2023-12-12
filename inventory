@@ -1,3 +1,2 @@
 [targets]
-172.16.132.87 ansible_user=all
- 
+172.17.0.1 ansible_user=all
