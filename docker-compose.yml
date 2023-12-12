@@ -21,10 +21,10 @@ services:
     restart: always
     networks:
       - spe-network
-    environment:
-      MYSQL_URL: jdbc:mysql://spe-project:3306/ticketresolver?createDatabaseIfNotExist=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
-      MYSQL_NAME: spe-project
-      MYSQL_PASSWORD: Abcd@1234
+    # environment:
+    #   MYSQL_URL: jdbc:mysql://spe-project:3307/ticketresolver?createDatabaseIfNotExist=true&swapsieDevops?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    #   MYSQL_NAME: spe-project
+    #   MYSQL_PASSWORD: Abcd@1234
     ports:
       - "8081:8081"
     depends_on:
