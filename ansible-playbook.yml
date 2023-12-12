@@ -1,13 +1,13 @@
 ---
 - name: Deploy Docker Image to Container
-  hosts: targets
+  hosts: localhost
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: Copy .env file to remote host
-      copy:
-        src: .env
-        dest: ./
+    # - name: Copy .env file to remote host
+    #   copy:
+    #     src: .env
+    #     dest: ./
 
     - name: Copy compose file to remote host
       copy:
@@ -15,7 +15,7 @@
         dest: ./
 
     - name: run docker-compose file
-      command: docker-compose up -d
+      command: docker compose up -d
 
     # - name: Prune the dangling Docker images
     #   command: docker image prune --force
