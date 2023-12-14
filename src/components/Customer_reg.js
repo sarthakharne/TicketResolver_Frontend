@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "../PatientInfo.css";
+import "../Customer.css";
 import axios from 'axios';
 import Multiselect from "multiselect-react-dropdown";
 import { Link, useLocation, useNavigate,  } from "react-router-dom";
 import Swal from 'sweetalert2';
-import Navbar_head from './Navbar_head';
 
 
 

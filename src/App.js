@@ -1,5 +1,5 @@
 import Login from './components/Login'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Customer from './components/Customer';
@@ -9,12 +9,22 @@ import Customer_reg from './components/Customer_reg';
 import Navbar_head from './components/Navbar_head';
 import About from './About'
 import Contact from './Contact'
+import { useEffect } from 'react';
 
 function App() {
   let h="http://localhost:8081/"
+  const location = useLocation()
+
+  useEffect(() => {
+    
+  }, [location])
+
+
   return (
   
-    <>
+    <div>
+      
+      <Navbar_head path={location} />
       <Routes>
         
         <Route path='/' element={<Login Api={h}/>}/>
@@ -27,7 +37,7 @@ function App() {
 
       </Routes>
     
-    </>
+    </div>
   );
 }
   

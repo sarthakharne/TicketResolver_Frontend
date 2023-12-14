@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "../PatientInfo.css";
+import "../Customer.css";
 import Multiselect from "multiselect-react-dropdown";
 import { Link, useLocation, useNavigate,  } from "react-router-dom";
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import Navbar_head from './Navbar_head';
 
 
 
@@ -85,7 +84,7 @@ axios.interceptors.request.use( config => {
 return(
 <>
 <div className="container mt-4">
-  <Navbar_head/>
+  
   <h1>Register your Request</h1>
 <form noValidate>
         <div className="form-group">

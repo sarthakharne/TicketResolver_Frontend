@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "../PatientInfo.css";
+import "../Customer.css";
 import Button from "react-bootstrap/Button";
-import { Link, useLocation, useNavigate,  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import Navbar_head from './Navbar_head';
 
 
 function Owner(props){
@@ -52,50 +51,6 @@ function Owner(props){
     Fetch_data();
 },[]);
 console.log(res)
- // console.log(res,response[1].firstName +" "+ response[1].lastName)
-  
-
-
-  //let res1=[{patient_id:1,firstName:"Raju",lastName:"Srivastav",Doc_id:5},{patient_id:5,firstName:"Vishal",lastName:"Singh",Doc_id:3},{patient_id:8,firstName:"Simha",lastName:"Nandagudi",Doc_id:11}]
-  //setRes(res1)
-  // console.log(res)
-  // console.log(patient_id)
-
-  
-
-  // showStudentList = () => {
-  //   this.setState({
-  //     showTable: true,
-  //   })
-//   const navigate = useNavigate()
-
-//   const Fetch_data = async()=>{
-//     await axios.get(`${props.Api}doctor/`, 
-    
-//     {
-//       mode:'cors',
-//       headers: new Headers({
-//         "ngrok-skip-browser-warning": "69420",
-//       }),
-      
-//   })
-//     .then((response)=>{
-//         console.log(response.data);
-//         setRes(response.data);
-//     })
-//     .catch(function(error)
-//     {
-//         console.log(error);
-//     });
-    
-// }
-
-//   useEffect(()=>{
-//     Fetch_data();
-// },[]);
-
-
-//console.log(res)
 
 const Acknow = async (cid,ack)=>{
 
@@ -192,11 +147,10 @@ for(let i=0;i<res.length;i++){
 
   return (
     <>
-    <div>
-      <Navbar_head/>
-      <h1>Customer Request's</h1>
+    <div className='heading'>
+      <h1>Customer Requests</h1>
     </div>
-      <div>
+      <div className='container'>
         <div className="table-responsive">
           <table className="table table-striped">
             <thead>
