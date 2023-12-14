@@ -118,12 +118,12 @@ const validateForm = () => {
 
 return(
 <>
-<div class="container mt-4">
+<div className="container mt-4">
   <h1>Register,here!</h1>
 <form onSubmit={save}>
-        <div class="form-group">
+        <div className="form-group">
             <label>First Name</label>
-            <input type="text" class="form-control" placeholder="Enter First Name"
+            <input type="text" className="form-control" placeholder="Enter First Name"
              value={fname}
             onChange={(event) =>
               {
@@ -133,9 +133,9 @@ return(
         {formErrors.fname && <span style={{color:"red",fontSize:15}}>{formErrors.fname}</span>}
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Last Name</label>
-            <input type="text" class="form-control" placeholder="Enter Last Name"
+            <input type="text" className="form-control" placeholder="Enter Last Name"
              value={lname}
              onChange={(event) =>
                {
@@ -145,9 +145,9 @@ return(
         {formErrors.lname && <span style={{color:"red",fontSize:15}}>{formErrors.lname}</span>}
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Email-ID</label>
-            <input type="text" class="form-control" placeholder="Enter Email-id"
+            <input type="text" className="form-control" placeholder="Enter Email-id"
             value={email}
             onChange={(event) =>
               {
@@ -157,9 +157,9 @@ return(
       {formErrors.email && <span style={{color:"red",fontSize:15}}>{formErrors.email}</span>}
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>User Name</label>
-            <input type="text" class="form-control" placeholder="Enter User name"
+            <input type="text" className="form-control" placeholder="Enter User name"
             value={uname}
             onChange={(event) =>
               {
@@ -171,9 +171,9 @@ return(
 
         
       
-         <div class="form-group">
+         <div className="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password"
+            <input type="password" className="form-control" placeholder="Enter Password"
             value={pwd}
             onChange={(event) =>
               {
@@ -185,7 +185,7 @@ return(
 
         
         
-        <button class="btn btn-primary mt-4"  type='submit' >Register</button>
+        <button className="btn btn-primary mt-4"  type='submit' >Register</button>
         </form>
 
 

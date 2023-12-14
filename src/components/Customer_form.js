@@ -84,13 +84,13 @@ axios.interceptors.request.use( config => {
 
 return(
 <>
-<div class="container mt-4">
+<div className="container mt-4">
   <Navbar_head/>
   <h1>Register your Request</h1>
 <form noValidate>
-        <div class="form-group">
+        <div className="form-group">
             <label>Vehicle Registration Number</label>
-            <input type="text" class="form-control" placeholder="Enter Vehicle Registration Number"
+            <input type="text" className="form-control" placeholder="Enter Vehicle Registration Number"
              value={nump}
              onChange={(event) =>
                {
@@ -100,18 +100,18 @@ return(
         </div>
 
 
-        <div class="form-group">
+        <div className="form-group">
         <label>Select Vehicle Type</label>
         <select onChange={(event) =>
               {
                 setVehtype(event.target.value);      
-              }} placeholder='Select Vehicle Type' class="form-control" value={vtype}  required>
+              }} placeholder='Select Vehicle Type' className="form-control" value={vtype}  required>
           <option>Two-Wheeler</option>
           <option>Four-Wheeler</option>
         </select>
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Select Services</label>
             <Multiselect
         isObject={false}
@@ -134,9 +134,9 @@ return(
       required/>
          </div> 
       
-         <div class="form-group">
+         <div className="form-group">
             <label>Remarks</label>
-            <input type="text" class="form-control" placeholder="Enter Remarks"
+            <input type="text" className="form-control" placeholder="Enter Remarks"
             value={remarks}
             onChange={(event) =>
               {
@@ -145,9 +145,9 @@ return(
            />
         </div>  
 
-        <div class="form-group" required>
+        <div className="form-group" required>
             <label>Address</label>
-            <input type="text" class="form-control" placeholder="Enter Address"
+            <input type="text" className="form-control" placeholder="Enter Address"
             value={Add}
             onChange={(event) =>
               {
@@ -156,7 +156,7 @@ return(
            required />
         </div>
         
-        <button class="btn btn-primary mt-4"  onClick={save} >Register</button>
+        <button className="btn btn-primary mt-4"  onClick={save} >Register</button>
         </form>
 
 

@@ -50,11 +50,11 @@ function Admin_reg(props){
 
 return(
 <>
-<div class="container mt-4">
+<div className="container mt-4">
 <form>
-        <div class="form-group">
+        <div className="form-group">
             <label>First Name</label>
-            <input type="text" class="form-control" placeholder="Enter First Name"
+            <input type="text" className="form-control" placeholder="Enter First Name"
              value={fname}
             onChange={(event) =>
               {
@@ -63,9 +63,9 @@ return(
             />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Last Name</label>
-            <input type="text" class="form-control" placeholder="Enter Last Name"
+            <input type="text" className="form-control" placeholder="Enter Last Name"
              value={lname}
              onChange={(event) =>
                {
@@ -74,9 +74,9 @@ return(
             />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Qualification</label>
-            <input type="text" class="form-control" placeholder="Enter Qualification"
+            <input type="text" className="form-control" placeholder="Enter Qualification"
             value={qualification}
             onChange={(event) =>
               {
@@ -85,9 +85,9 @@ return(
            />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Username</label>
-            <input type="text" class="form-control" placeholder="Enter Username"
+            <input type="text" className="form-control" placeholder="Enter Username"
             value={username}
             onChange={(event) =>
               {
@@ -96,9 +96,9 @@ return(
            />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password"
+            <input type="password" className="form-control" placeholder="Enter Password"
             value={password}
             onChange={(event) =>
               {
@@ -107,7 +107,7 @@ return(
            />
         </div>
         
-        <button class="btn btn-primary mt-4"  onClick={save} >Register</button>
+        <button className="btn btn-primary mt-4"  onClick={save} >Register</button>
         </form>
 
 

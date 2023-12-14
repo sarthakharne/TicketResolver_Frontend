@@ -231,12 +231,12 @@ for(let i=0;i<res.length;i++){
                         >
                         Mark as Done
                       </Button>
-                      {/* <input type="text" class="form-control" placeholder="Enter Email-id"></input>  */}
+                      {/* <input type="text" className="form-control" placeholder="Enter Email-id"></input>  */}
             </td>
 
             <td>
               
-            <input type="text" class="option1" placeholder="Type acknowledgement" 
+            <input type="text" className="option1" placeholder="Type acknowledgement" 
             onChange={(event) =>
               {
                 setAck(event.target.value);
@@ -246,7 +246,7 @@ for(let i=0;i<res.length;i++){
                         type="click"
                         variant="primary"
                         style={{ backgroundColor:"Blue" }}
-                        class="option1"
+                        className="option1"
                         onClick={() => Acknow(val.id,ack)}
                         >
                         Send
