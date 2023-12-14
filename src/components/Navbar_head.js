@@ -29,9 +29,9 @@ function Navbar_head() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" style={{ fontWeight: 'bold' }}>Home</Nav.Link>
+            <Nav.Link href="/customer" style={{ fontWeight: 'bold' }}>Home</Nav.Link>
             
-            <NavDropdown title="Services" id="navbarScrollingDropdown" style={{ fontWeight: 'bold' }}>
+            {/* <NavDropdown title="Services" id="navbarScrollingDropdown" style={{ fontWeight: 'bold' }}>
               <NavDropdown.Item href="#action3" >Book an Appointment</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action4">
@@ -41,9 +41,9 @@ function Navbar_head() {
               <NavDropdown.Item href="#action5">
                 Consultation
               </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#action1" style={{ fontWeight: 'bold' }}>Contact</Nav.Link>
-            <Nav.Link href="#action1" style={{ fontWeight: 'bold' }}>About</Nav.Link>
+            </NavDropdown> */}
+            <Nav.Link href="/contact" style={{ fontWeight: 'bold' }}>Contact</Nav.Link>
+            <Nav.Link href="/about" style={{ fontWeight: 'bold' }}>About</Nav.Link>
           </Nav>
           <Nav.Link href="#action1"><Button variant='danger' onClick={()=>navigate('/')} >LOGOUT  </Button></Nav.Link>
 

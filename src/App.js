@@ -15,7 +15,6 @@ function App() {
   return (
   
     <>
-    {/* <Navbar_head></Navbar_head> */}
       <Routes>
         
         <Route path='/' element={<Login Api={h}/>}/>
