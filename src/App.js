@@ -1,4 +1,3 @@
-
 import Login from './components/Login'
 import { Route, Router, Routes } from 'react-router-dom'
 import './App.css';
@@ -8,8 +7,8 @@ import Customer_form from './components/Customer_form';
 import Owner from './components/Owner';
 import Customer_reg from './components/Customer_reg';
 import Navbar_head from './components/Navbar_head';
-// Example of a data array that
-// you might receive from an API
+import About from './About'
+import Contact from './Contact'
 
 function App() {
   let h="http://localhost:8081/"
@@ -18,15 +17,15 @@ function App() {
     <>
     {/* <Navbar_head></Navbar_head> */}
       <Routes>
-      <Route path='/' element={<Login Api={h}/>}/>
-      <Route path='/customer' element={<Customer Api={h}/>}/>
-      <Route path='/customer/custform' element={<Customer_form Api={h}/>}/>
-      <Route path='/owner' element={<Owner Api={h}/>}/>
-      <Route path='/register' element={<Customer_reg Api={h}/>}/>
+        
+        <Route path='/' element={<Login Api={h}/>}/>
+        <Route path='/customer' element={<Customer Api={h}/>}/>
+        <Route path='/customer/custform' element={<Customer_form Api={h}/>}/>
+        <Route path='/owner' element={<Owner Api={h}/>}/>
+        <Route path='/register' element={<Customer_reg Api={h}/>}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
 
-        {/* <Route path='/custform' element={<Customer_form/>}/> */}
-        {/* <Route path='/customer' element={<Customer/>}/> */}
-        {/* <Route path='/' element={<Customer_form/>}/> */}
       </Routes>
     
     </>
