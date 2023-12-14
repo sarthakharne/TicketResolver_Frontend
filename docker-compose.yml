@@ -1,8 +1,8 @@
 version: '3'
 services:
-  mysql-spe-services:
+  mysql_db:
     image: mysql
-    container_name: mysql-spe-services
+    container_name: mysql_db
     restart: always
     networks:
       - spe-network
@@ -17,9 +17,9 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
 
-  ticketresolver_backend_Container:
+  ticketresolver_backend:
     image: sarthakharne2262/ticketresolver-backend:latest
-    container_name: ticketresolver_backend_Container
+    container_name: ticketresolver_backend
     restart: always
     networks:
       - spe-network
@@ -27,24 +27,24 @@ services:
       # MYSQL_URL: jdbc:mysql://spe-project:3307/ticketresolver?createDatabaseIfNotExist=true&swapsieDevops?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
       # MYSQL_NAME: spe-project
       # MYSQL_PASSWORD: Abcd@1234
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-spe-services:3306/ticketresolver?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/ticketresolver?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: spe-project
       SPRING_DATASOURCE_PASSWORD: Abcd@1234
     ports:
       - "8081:8081"
     depends_on:
-      - mysql-spe-services
+      - mysql_db
 
-  ticketresolver_frontend_Container:
+  ticketresolver_frontend:
     image: sarthakharne2262/ticketresolver_frontend:latest
-    container_name: ticketresolver_frontend_Container
+    container_name: ticketresolver_frontend
     restart: always
     networks:
       - spe-network
     ports:
       - "3000:3000"
     depends_on:
-      - ticketresolver_backend_Container
+      - ticketresolver_backend
     
 networks:
   spe-network:
